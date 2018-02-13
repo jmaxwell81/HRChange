@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="HR Changes" max_length="40" name="x_117085_hr_change_hr_changes" type="collection">
+        <element label="Employee Comments" max_length="40" name="employee_comments" type="string"/>
+        <element label="Employee Email" max_length="40" name="employee_email" type="string"/>
+        <element label="Employee Name" max_length="40" name="employee_name" type="string"/>
+        <element label="Employee UserID" max_length="40" name="employee_userid" type="string"/>
+        <element label="HR Comments" max_length="40" name="hr_comments" type="string"/>
+        <element label="HR Email" max_length="40" name="hr_email" type="string"/>
+        <element label="HR Name" max_length="40" name="hr_name" type="string"/>
+        <element label="HR UserID" max_length="40" name="hr_userid" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Resolved" max_length="40" name="resolved" type="glide_date_time"/>
+        <element default="Pending" label="Status" max_length="40" name="status" type="string"/>
+        <element label="Submitted" max_length="40" name="submitted" type="glide_date_time"/>
+    </element>
+</database>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-13 15:17:55</sys_created_on>
+        <sys_id>bfa7b805db1013005e53d8c0cf96194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_117085_hr_change_hr_changes.x_117085_hr_change.hr_changes_user</sys_name>
+        <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
+        <sys_security_acl display_value="x_117085_hr_change_hr_changes">b7a7b805db1013005e53d8c0cf96194c</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_bfa7b805db1013005e53d8c0cf96194e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-13 15:17:55</sys_updated_on>
+        <sys_user_role display_value="x_117085_hr_change.hr_changes_user" name="x_117085_hr_change.hr_changes_user">37a7bcc1db1013005e53d8c0cf9619e1</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <css/>
+        <draft>false</draft>
+        <id>hr_changes</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-13 18:31:00</sys_created_on>
+        <sys_id>dce36d85db5013005e53d8c0cf96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>hr_changes</sys_name>
+        <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
+        <sys_update_name>sp_page_dce36d85db5013005e53d8c0cf96199e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-13 18:31:00</sys_updated_on>
+        <title>HR Changes</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=dce36d85db5013005e53d8c0cf96199e"/>
+</record_update>

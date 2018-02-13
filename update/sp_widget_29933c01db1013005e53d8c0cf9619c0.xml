@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function(spModal) {
+  var c = this;
+	var shared = {};
+	
+	c.onEdit = function(size,item){
+		alert('Work in progress.');
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>table {
+ 	font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+ 	border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+
+tr:nth-child(even){
+ 	background-color: #dddddd; 
+}
+
+button {
+ 	width: 150px; 
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hr_change</id>
+        <internal>false</internal>
+        <link/>
+        <name>HR Change</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  
+	data.HRChanges = [];
+	
+	var rs = new GlideRecord('x_117085_hr_change_hr_changes');
+	while(rs.next()){
+		data.HRChanges.push({
+			Sys_ID: rs.sys_id.toString(),
+			EmployeeName: rs.employee_name.toString(),
+			Submitted: rs.submitted.toString(),
+			Status: rs.status.toString()
+		})
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-13 15:00:01</sys_created_on>
+        <sys_id>29933c01db1013005e53d8c0cf9619c0</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>HR Change</sys_name>
+        <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
+        <sys_update_name>sp_widget_29933c01db1013005e53d8c0cf9619c0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-13 18:29:13</sys_updated_on>
+        <template><![CDATA[<div class="container">
+	<div class="header" style="height:150px; width:100%;">
+    <h1>
+      HR Change
+    </h1>
+  </div>
+  <div class="buttons" style="height:50px;">
+    <button ng-click="" class="newChange btn btn-primary">
+      New HR Change
+    </button>
+    &nbsp;
+    <button ng-click="" class="settings btn btn-primary">
+      Settings
+    </button>
+  </div>
+  <div class="content">
+    <table>
+      <tr>
+      	<th>Employee Name</th>
+        <th>Submitted (Date/Time)</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="item in data.HRChanges">
+      	<td>{{item.EmployeeName}}</td>
+        <td>{{item.Submitted}}</td>
+        <td>{{item.Status}}</td>
+        <td>
+        	<button ng-click="c.onEdit('lg',item)" class="editOffboarding btn bth-primary">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    &nbsp;
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

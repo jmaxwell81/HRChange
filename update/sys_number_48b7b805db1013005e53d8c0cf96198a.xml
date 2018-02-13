@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_117085_hr_change_hr_changes">x_117085_hr_change_hr_changes</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>HR</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-13 15:17:56</sys_created_on>
+        <sys_id>48b7b805db1013005e53d8c0cf96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HR</sys_name>
+        <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
+        <sys_update_name>sys_number_48b7b805db1013005e53d8c0cf96198a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-13 15:17:56</sys_updated_on>
+    </sys_number>
+</record_update>

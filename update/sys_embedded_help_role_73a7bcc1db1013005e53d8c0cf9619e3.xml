@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_117085_hr_change.hr_changes_user" name="x_117085_hr_change.hr_changes_user">37a7bcc1db1013005e53d8c0cf9619e1</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-13 15:17:54</sys_created_on>
+        <sys_id>73a7bcc1db1013005e53d8c0cf9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>37a7bcc1db1013005e53d8c0cf9619e1</sys_name>
+        <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
+        <sys_update_name>sys_embedded_help_role_73a7bcc1db1013005e53d8c0cf9619e3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-13 15:17:54</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
