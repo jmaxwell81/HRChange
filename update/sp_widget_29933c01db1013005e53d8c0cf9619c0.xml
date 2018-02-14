@@ -5,10 +5,51 @@
   var c = this;
 	var shared = {};
 	
-	c.onEdit = function(size,item){
-		alert('Work in progress.');
+	c.onCreateNew = function(size,item){
+		shared.HR = item;
+		spModal.open({
+			size: size,
+			title: 'New HR Change',
+			widget: '98cc61c9db5013005e53d8c0cf96197e',
+			buttons: [{label:'${Submit}', primary:true}],
+			shared: shared
+		}).then(function(){
+			c.data.action = "newRecord";
+			c.data.myEmployeeName = shared.HR.EmployeeName.toString();
+			c.data.mySubmitted = shared.HR.Submitted.toString();
+			c.data.myStatus = shared.HR.Status.toString();
+			c.data.myComments = shared.HR.Comments.toString();
+			
+			c.server.update().then(function(){
+				c.data.action = undefined;
+			});
+		});	
+	}//onCreateNew
+	
+	c.onSettings = function(size){
+		alert('Work in progress');
 	}
-}]]></client_script>
+	
+	c.onEdit = function(size,item){
+		shared.HR = item;
+		spModal.open({
+			size: size,
+			title: 'Update HR Change',
+			widget: '98cc61c9db5013005e53d8c0cf96197e',
+			buttons: [{label:'${Update}', primary:true}],
+			shared: shared
+		}).then(function(){
+			c.data.action = "updateRecord";
+			c.data.mySys_ID = shared.HR.Sys_ID.toString();			
+			c.data.myEmployeeName = shared.HR.EmployeeName.toString();			
+			
+			c.server.update().then(function(){
+				c.data.action = undefined;
+			});//update
+			
+		});//sp.Modal.Open
+	}//c.onEdit
+}//function]]></client_script>
         <controller_as>c</controller_as>
         <css>table {
  	font-family: arial, sans-serif;
@@ -20,6 +61,7 @@ td, th {
  	border: 1px solid #dddddd;
   text-align: left;
   padding: 15px;
+  vertical-align: top;
 }
 
 tr:nth-child(even){
@@ -43,17 +85,66 @@ button {
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-  
-	data.HRChanges = [];
 	
+	//gs.info('Start 0');
+	
+	if (input){
+		if (input.action == "newRecord"){
+			try{
+			var rsInsert = new GlideRecord('x_117085_hr_change_hr_changes');
+			rsInsert.initialize();
+			rsInsert.employee_name = input.myEmployeeName;
+			rsInsert.submitted = input.mySubmitted;
+			rsInsert.employee_comments = input.myComments;
+			rsInsert.status = input.myStatus;
+			rsInsert.insert();
+			gs.addInfoMessage("The record was inserted.");
+			}
+			catch(err){
+				gs.addErrorMessage(err.message);
+			}
+		}
+		if (input.action == "updateRecord"){
+				var rsUpdate = new GlideRecord('x_117085_hr_change_hr_changes');
+				rsUpdate.addQuery('sys_id', input.mySys_ID);
+				rsUpdate.query();
+				if(rsUpdate.next())
+				{
+					rsUpdate.employee_name = input.myEmployeeName;
+					rsUpdate.update();						
+				}//next				
+				gs.addInfoMessage("The record was updated.");
+		}//updateRecord
+	}//if(input)
+  
+	data.HRNew = [];
+	var mydate = new GlideDateTime();  
+	data.HRNew.push({
+		Sys_ID: "0",
+		EmployeeName: gs.getUserDisplayName(),
+		Submitted: mydate.getDisplayValue(),
+		Status: "Pending",
+		Comments: "",
+		HRName: "",
+		HRResolutionDateTime: "",
+		HRComments: ""
+	});
+	
+	
+	data.HRChanges = [];	
 	var rs = new GlideRecord('x_117085_hr_change_hr_changes');
+	rs.query();
 	while(rs.next()){
 		data.HRChanges.push({
 			Sys_ID: rs.sys_id.toString(),
 			EmployeeName: rs.employee_name.toString(),
 			Submitted: rs.submitted.toString(),
-			Status: rs.status.toString()
-		})
+			Status: rs.status.toString(),
+			Comments: rs.employee_comments.toString(),
+			HRName: rs.hr_name.toString(),
+			HRResolutionDateTime: rs.hr_resolution.toString(),
+			HRComments: rs.hr_comments.toString()
+		});
 	}
 
 })();]]></script>
@@ -62,43 +153,61 @@ button {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-02-13 15:00:01</sys_created_on>
         <sys_id>29933c01db1013005e53d8c0cf9619c0</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_name>HR Change</sys_name>
         <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
         <sys_policy/>
         <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
         <sys_update_name>sp_widget_29933c01db1013005e53d8c0cf9619c0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-13 18:29:13</sys_updated_on>
+        <sys_updated_on>2018-02-14 18:36:17</sys_updated_on>
         <template><![CDATA[<div class="container">
 	<div class="header" style="height:150px; width:100%;">
+    <div class="subheader" style="height:50px; width:100%;">
+      &nbsp;
+    </div>
     <h1>
       HR Change
     </h1>
   </div>
   <div class="buttons" style="height:50px;">
-    <button ng-click="" class="newChange btn btn-primary">
-      New HR Change
-    </button>
-    &nbsp;
-    <button ng-click="" class="settings btn btn-primary">
-      Settings
-    </button>
-  </div>
+    <table style="width:50px;">
+      <tr ng-repeat="item in data.HRNew">
+        <td style="padding: 3px; border: none;">
+        		<button ng-click="c.onCreateNew('lg',item)" class="newHRChange btn btn-primary">
+      				New HR Change
+    			</button>  
+        </td>
+        <td style="padding: 3px; border: none;">
+        	<button ng-click="c.onSettings('lg')" class="settings btn btn-primary">
+      			Settings
+    			</button>
+        </td>
+      </tr>
+    </table>
+  </div>  
   <div class="content">
     <table>
       <tr>
-      	<th>Employee Name</th>
-        <th>Submitted (Date/Time)</th>
+      	<th>Employee<br/>Name</th>
+        <th>Submitted<br/>(Date/Time)</th>
         <th>Status</th>
+        <th>Employee<br/>Comments</th>
+        <th>HR Name</th>
+        <th>HR Date/Time</th>
+        <th>HR Comments</th>
         <th>Action</th>
       </tr>
       <tr ng-repeat="item in data.HRChanges">
       	<td>{{item.EmployeeName}}</td>
         <td>{{item.Submitted}}</td>
         <td>{{item.Status}}</td>
+        <td>{{item.Comments}}</td>
+        <td>{{item.HRName}}</td>
+        <td>{{item.HRResolutionDateTime}}</td>
+        <td>{{item.HRComments}}</td>
         <td>
-        	<button ng-click="c.onEdit('lg',item)" class="editOffboarding btn bth-primary">
+        	<button ng-click="c.onEdit('lg',item)" class="editOffboarding btn btn-primary">
             Edit
           </button>
         </td>

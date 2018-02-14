@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {
+  var c = this;
+	
+	var shared = c.widget.options.shared;
+	c.data.relatedHR = shared.HR;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>td {
+  vertical-align: top;
+  text-align: left;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>update_hr_change</id>
+        <internal>false</internal>
+        <link/>
+        <name>Update HR Change</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  data.relatedHR = {};
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-13 19:09:47</sys_created_on>
+        <sys_id>98cc61c9db5013005e53d8c0cf96197e</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>Update HR Change</sys_name>
+        <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
+        <sys_update_name>sp_widget_98cc61c9db5013005e53d8c0cf96197e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-14 18:09:35</sys_updated_on>
+        <template><![CDATA[<div class="container">
+	<div class="content">
+    <table>
+      <tr>
+        <td>
+        	Employee Name:
+        </td>
+        <td>
+        	<input type="text" ng-model="data.relatedHR.EmployeeName" ng-disabled="true" />
+          <input type="hidden" ng-model="data.relatedHR.Sys_ID" />
+        </td>
+      </tr>
+      <tr>
+      	<td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+      	<td>
+        	Submitted (Date/Time):
+        </td>
+        <td>
+        	<input type="text" ng-model="data.relatedHR.Submitted" ng-disabled="true"/>
+        </td>
+      </tr>
+      <tr>
+      	<td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+      	<td>Employee Comments:</td>
+        <td>
+          <textarea rows="4" cols="80" ng-model="data.relatedHR.Comments" ng-disabled="data.relatedHR.Sys_ID.length == 32" ></textarea>
+        </td>
+      </tr>
+      <tr>
+      	<td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+      	<td>Status:</td>
+        <td>
+          <input type="text" ng-model="data.relatedHR.Status" ng-disabled="true"/>
+        </td>
+      </tr>
+    </table>          
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

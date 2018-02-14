@@ -8,6 +8,7 @@
         <element label="HR Comments" max_length="40" name="hr_comments" type="string"/>
         <element label="HR Email" max_length="40" name="hr_email" type="string"/>
         <element label="HR Name" max_length="40" name="hr_name" type="string"/>
+        <element label="HR Resolution" max_length="40" name="hr_resolution" type="glide_date_time"/>
         <element label="HR UserID" max_length="40" name="hr_userid" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Resolved" max_length="40" name="resolved" type="glide_date_time"/>
