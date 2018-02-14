@@ -17,11 +17,11 @@
         <description/>
         <docs/>
         <field_list/>
-        <has_preview>true</has_preview>
-        <id>update_hr_change</id>
+        <has_preview>false</has_preview>
+        <id>add_hr_change</id>
         <internal>false</internal>
         <link/>
-        <name>Update HR Change</name>
+        <name>Add HR Change</name>
         <option_schema/>
         <public>false</public>
         <roles/>
@@ -31,16 +31,16 @@
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-13 19:09:47</sys_created_on>
-        <sys_id>98cc61c9db5013005e53d8c0cf96197e</sys_id>
-        <sys_mod_count>42</sys_mod_count>
-        <sys_name>Update HR Change</sys_name>
+        <sys_created_on>2018-02-14 19:03:25</sys_created_on>
+        <sys_id>3ce43ad5db5013005e53d8c0cf961947</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Add HR Change</sys_name>
         <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
         <sys_policy/>
         <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
-        <sys_update_name>sp_widget_98cc61c9db5013005e53d8c0cf96197e</sys_update_name>
+        <sys_update_name>sp_widget_3ce43ad5db5013005e53d8c0cf961947</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-14 21:05:43</sys_updated_on>
+        <sys_updated_on>2018-02-14 19:04:34</sys_updated_on>
         <template><![CDATA[<div class="container">
 	<div class="content">
     <table>
@@ -80,19 +80,9 @@
         <td>&nbsp;</td>
       </tr>
       <tr>
-      	<td>New Status:</td>
+      	<td>Status:</td>
         <td>
-          <input type="text" ng-model="data.relatedHR.NewStatus" ng-disabled="true"/>
-        </td>
-      </tr>      
-      <tr>
-      	<td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-      	<td>HR Comments:</td>
-        <td>
-          <textarea rows="4" cols="80" ng-model="data.relatedHR.HRCommentsInitial" ng-disabled="false" ></textarea>
+          <input type="text" ng-model="data.relatedHR.Status" ng-disabled="true"/>
         </td>
       </tr>
     </table>          
