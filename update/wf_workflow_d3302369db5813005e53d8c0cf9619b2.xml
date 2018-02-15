@@ -2,7 +2,7 @@
 <record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_stages>{"subflows":[],"stages":{},"activities":{},"ends":["b73e33e5db9813005e53d8c0cf9619d0"]}</activity_stages>
+        <activity_stages>{"subflows":[],"stages":{},"activities":{},"ends":["cd5704f9db9813005e53d8c0cf961951"]}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
         <checked_out_by/>
@@ -10,10 +10,10 @@
         <condition/>
         <condition_type>run_match</condition_type>
         <description>Send email when an HR change was created or updated.</description>
-        <expected_sequences>333e33e5db9813005e53d8c0cf9619cf,373e33e5db9813005e53d8c0cf9619d1,733e33e5db9813005e53d8c0cf9619d3,b73e33e5db9813005e53d8c0cf9619d0</expected_sequences>
+        <expected_sequences>455704f9db9813005e53d8c0cf961951,415704f9db9813005e53d8c0cf961950,c55704f9db9813005e53d8c0cf961952,cd5704f9db9813005e53d8c0cf961951</expected_sequences>
         <expected_time>1970-01-01 14:00:00</expected_time>
         <expected_time_type/>
-        <full_sequences>333e33e5db9813005e53d8c0cf9619cf,373e33e5db9813005e53d8c0cf9619d1,733e33e5db9813005e53d8c0cf9619d3,b73e33e5db9813005e53d8c0cf9619d0</full_sequences>
+        <full_sequences>455704f9db9813005e53d8c0cf961951,415704f9db9813005e53d8c0cf961950,c55704f9db9813005e53d8c0cf961952,cd5704f9db9813005e53d8c0cf961951</full_sequences>
         <journal/>
         <max_activity_count>100</max_activity_count>
         <name>HR Change</name>
@@ -28,16 +28,16 @@
         <schedule/>
         <stage_field/>
         <stage_order>computed</stage_order>
-        <start display_value="Begin">333e33e5db9813005e53d8c0cf9619cf</start>
+        <start display_value="Begin">455704f9db9813005e53d8c0cf961951</start>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>333e33e5db9813005e53d8c0cf9619cd</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>4d5704f9db9813005e53d8c0cf96194e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:05:16</sys_updated_on>
+        <sys_updated_on>2018-02-15 20:41:10</sys_updated_on>
         <table>x_117085_hr_change_hr_changes</table>
         <timezone/>
-        <validated>true</validated>
+        <validated>false</validated>
         <workflow display_value="HR Change">d3302369db5813005e53d8c0cf9619b2</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
@@ -80,21 +80,21 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>333e33e5db9813005e53d8c0cf9619cf</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>455704f9db9813005e53d8c0cf961951</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="HR Change">333e33e5db9813005e53d8c0cf9619cd</workflow_version>
+        <workflow_version display_value="HR Change">4d5704f9db9813005e53d8c0cf96194e</workflow_version>
         <x>20</x>
         <y>20</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=333e33e5db9813005e53d8c0cf9619cf"/>
+    <sys_variable_value action="delete_multiple" query="document_key=455704f9db9813005e53d8c0cf961951"/>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Begin">333e33e5db9813005e53d8c0cf9619cf</activity>
+        <activity display_value="Begin">455704f9db9813005e53d8c0cf961951</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -108,11 +108,11 @@
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>7f3e33e5db9813005e53d8c0cf9619cf</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>495704f9db9813005e53d8c0cf961951</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
@@ -130,19 +130,19 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>b73e33e5db9813005e53d8c0cf9619d0</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>cd5704f9db9813005e53d8c0cf961951</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="HR Change">333e33e5db9813005e53d8c0cf9619cd</workflow_version>
+        <workflow_version display_value="HR Change">4d5704f9db9813005e53d8c0cf96194e</workflow_version>
         <x>828</x>
         <y>75</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=b73e33e5db9813005e53d8c0cf9619d0"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cd5704f9db9813005e53d8c0cf961951"/>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
@@ -159,44 +159,44 @@
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>373e33e5db9813005e53d8c0cf9619d1</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>415704f9db9813005e53d8c0cf961950</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="HR Change">333e33e5db9813005e53d8c0cf9619cd</workflow_version>
+        <workflow_version display_value="HR Change">4d5704f9db9813005e53d8c0cf96194e</workflow_version>
         <x>187</x>
         <y>60</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=373e33e5db9813005e53d8c0cf9619d1"/>
+    <sys_variable_value action="delete_multiple" query="document_key=415704f9db9813005e53d8c0cf961950"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>373e33e5db9813005e53d8c0cf9619d1</document_key>
+        <document_key>415704f9db9813005e53d8c0cf961950</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>373e33e5db9813005e53d8c0cf9619d2</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>095704f9db9813005e53d8c0cf961950</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>status=Pending^EQ</value>
         <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>373e33e5db9813005e53d8c0cf9619d1</document_key>
+        <document_key>415704f9db9813005e53d8c0cf961950</document_key>
         <order>2</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>bb3e33e5db9813005e53d8c0cf9619d1</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>455704f9db9813005e53d8c0cf961950</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
 answer = true;&#13;
 </value>
@@ -204,36 +204,36 @@ answer = true;&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>373e33e5db9813005e53d8c0cf9619d1</document_key>
+        <document_key>415704f9db9813005e53d8c0cf961950</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>373e33e5db9813005e53d8c0cf9619d2</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>095704f9db9813005e53d8c0cf961950</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>status=Pending^EQ</value>
         <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>373e33e5db9813005e53d8c0cf9619d1</document_key>
+        <document_key>415704f9db9813005e53d8c0cf961950</document_key>
         <order>2</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>bb3e33e5db9813005e53d8c0cf9619d1</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>455704f9db9813005e53d8c0cf961950</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
 answer = true;&#13;
 </value>
         <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="New record">373e33e5db9813005e53d8c0cf9619d1</activity>
+        <activity display_value="New record">415704f9db9813005e53d8c0cf961950</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -247,11 +247,11 @@ answer = true;&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>fb3e33e5db9813005e53d8c0cf9619d2</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>4d5704f9db9813005e53d8c0cf961950</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Notification">0a6c97790a0a0b2756919eb960284334</activity_definition>
@@ -269,44 +269,108 @@ answer = true;&#13;
         <pinned_version/>
         <stage/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>733e33e5db9813005e53d8c0cf9619d3</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>c55704f9db9813005e53d8c0cf961952</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:04:54</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:15</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="HR Change">333e33e5db9813005e53d8c0cf9619cd</workflow_version>
-        <x>518</x>
+        <workflow_version display_value="HR Change">4d5704f9db9813005e53d8c0cf96194e</workflow_version>
+        <x>517</x>
         <y>77</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=733e33e5db9813005e53d8c0cf9619d3"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c55704f9db9813005e53d8c0cf961952"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
+        <order>150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>095704f9db9813005e53d8c0cf961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
+        <value>5f153ba1db9813005e53d8c0cf961934</value>
+        <variable display_value="">ae2121c70a0a0b3459708c9a60cd7312</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>0d5704f9db9813005e53d8c0cf961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">6d6816cd0a6a803f0853a8df38007572</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>455704f9db9813005e53d8c0cf961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
+        <value>Hi,&#13;
+There is a new HR Change created in the system by ${employee_name}.  Please navigate to https://dev19580.service-now.com/sp/?id=hr_changes to verify and apply the change.&#13;
+&#13;
+Please do not reply to this email.&#13;
+&#13;
+Thank you,&#13;
+System Admin&#13;
+&#13;
+Number: ${number}</value>
+        <variable display_value="">c35db5a50a0a0ba96248a70938ae8de6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>495704f9db9813005e53d8c0cf961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
+        <value/>
+        <variable display_value="">c35daa890a0a0ba96248a709c32994d6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>333e33e5db9813005e53d8c0cf9619d4</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>815704f9db9813005e53d8c0cf961953</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>New HR Change created in the system</value>
         <variable display_value="">c35db2180a0a0ba96248a709d1b6df20</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
         <order>500</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>7f3e33e5db9813005e53d8c0cf9619d3</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>cd5704f9db9813005e53d8c0cf961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:04:54</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.&#13;
 var currentUser = gs.getUser(); &#13;
 answer = gs.info(currentUser.getEmail());&#13;
@@ -315,123 +379,59 @@ answer = gs.info(currentUser.getEmail());&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
-        <order>150</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>b73e33e5db9813005e53d8c0cf9619d4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
-        <value>5f153ba1db9813005e53d8c0cf961934</value>
-        <variable display_value="">ae2121c70a0a0b3459708c9a60cd7312</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
-        <order>400</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>bb3e33e5db9813005e53d8c0cf9619d3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">6d6816cd0a6a803f0853a8df38007572</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
-        <order>300</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>f33e33e5db9813005e53d8c0cf9619d4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
-        <value>Hi,&#13;
-There is a new HR Change created in the system by ${employee_name} (change number: ${number}). Please navigate to https://dev19580.service-now.com/sp/?id=hr_changes to verify and apply the change.&#13;
-&#13;
-Please do not reply to this email.&#13;
-&#13;
-Thank you,&#13;
-System Admin&#13;
-&#13;
-Number: ${number}</value>
-        <variable display_value="">c35db5a50a0a0ba96248a70938ae8de6</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>f73e33e5db9813005e53d8c0cf9619d3</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>495704f9db9813005e53d8c0cf961952</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value/>
         <variable display_value="">c35daa890a0a0ba96248a709c32994d6</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>f73e33e5db9813005e53d8c0cf9619d3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
-        <value/>
-        <variable display_value="">c35daa890a0a0ba96248a709c32994d6</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
         <order>150</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>b73e33e5db9813005e53d8c0cf9619d4</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>095704f9db9813005e53d8c0cf961953</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>5f153ba1db9813005e53d8c0cf961934</value>
         <variable display_value="">ae2121c70a0a0b3459708c9a60cd7312</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>333e33e5db9813005e53d8c0cf9619d4</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>815704f9db9813005e53d8c0cf961953</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>New HR Change created in the system</value>
         <variable display_value="">c35db2180a0a0ba96248a709d1b6df20</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>f33e33e5db9813005e53d8c0cf9619d4</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>455704f9db9813005e53d8c0cf961953</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>Hi,&#13;
-There is a new HR Change created in the system by ${employee_name} (change number: ${number}). Please navigate to https://dev19580.service-now.com/sp/?id=hr_changes to verify and apply the change.&#13;
+There is a new HR Change created in the system by ${employee_name}.  Please navigate to https://dev19580.service-now.com/sp/?id=hr_changes to verify and apply the change.&#13;
 &#13;
 Please do not reply to this email.&#13;
 &#13;
@@ -443,29 +443,29 @@ Number: ${number}</value>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
         <order>400</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>bb3e33e5db9813005e53d8c0cf9619d3</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>0d5704f9db9813005e53d8c0cf961952</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>1</value>
         <variable display_value="">6d6816cd0a6a803f0853a8df38007572</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>733e33e5db9813005e53d8c0cf9619d3</document_key>
+        <document_key>c55704f9db9813005e53d8c0cf961952</document_key>
         <order>500</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>7f3e33e5db9813005e53d8c0cf9619d3</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>cd5704f9db9813005e53d8c0cf961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:04:54</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
         <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.&#13;
 var currentUser = gs.getUser(); &#13;
 answer = gs.info(currentUser.getEmail());&#13;
@@ -473,7 +473,7 @@ answer = gs.info(currentUser.getEmail());&#13;
         <variable display_value="">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Sends Email">733e33e5db9813005e53d8c0cf9619d3</activity>
+        <activity display_value="Sends Email">c55704f9db9813005e53d8c0cf961952</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -487,58 +487,58 @@ answer = gs.info(currentUser.getEmail());&#13;
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>7f3e33e5db9813005e53d8c0cf9619d4</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>4d5704f9db9813005e53d8c0cf961953</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
     </wf_condition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">fb3e33e5db9813005e53d8c0cf9619d2</condition>
-        <from display_value="New record">373e33e5db9813005e53d8c0cf9619d1</from>
+        <condition display_value="Always">4d5704f9db9813005e53d8c0cf961950</condition>
+        <from display_value="New record">415704f9db9813005e53d8c0cf961950</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>333e33e5db9813005e53d8c0cf9619d6</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>855704f9db9813005e53d8c0cf9619ac</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
-        <to display_value="Sends Email">733e33e5db9813005e53d8c0cf9619d3</to>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
+        <to display_value="Sends Email">c55704f9db9813005e53d8c0cf961952</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7f3e33e5db9813005e53d8c0cf9619d4</condition>
-        <from display_value="Sends Email">733e33e5db9813005e53d8c0cf9619d3</from>
+        <condition display_value="Always">495704f9db9813005e53d8c0cf961951</condition>
+        <from display_value="Begin">455704f9db9813005e53d8c0cf961951</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>373e33e5db9813005e53d8c0cf9619d6</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>c15704f9db9813005e53d8c0cf9619ac</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
-        <to display_value="End">b73e33e5db9813005e53d8c0cf9619d0</to>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
+        <to display_value="New record">415704f9db9813005e53d8c0cf961950</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">7f3e33e5db9813005e53d8c0cf9619cf</condition>
-        <from display_value="Begin">333e33e5db9813005e53d8c0cf9619cf</from>
+        <condition display_value="Always">4d5704f9db9813005e53d8c0cf961953</condition>
+        <from display_value="Sends Email">c55704f9db9813005e53d8c0cf961952</from>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>f73e33e5db9813005e53d8c0cf9619d6</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>cd5704f9db9813005e53d8c0cf9619ab</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
-        <to display_value="New record">373e33e5db9813005e53d8c0cf9619d1</to>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
+        <to display_value="End">cd5704f9db9813005e53d8c0cf961951</to>
     </wf_transition>
     <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
         <estimated_run_time/>
         <no_of_data_points>1</no_of_data_points>
         <percentage_threshold_ert>20</percentage_threshold_ert>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-15 19:02:24</sys_created_on>
-        <sys_id>f33e33e5db9813005e53d8c0cf9619cd</sys_id>
+        <sys_created_on>2018-02-15 19:42:05</sys_created_on>
+        <sys_id>cd5704f9db9813005e53d8c0cf96194e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-15 19:02:24</sys_updated_on>
-        <workflow_version display_value="HR Change">333e33e5db9813005e53d8c0cf9619cd</workflow_version>
+        <sys_updated_on>2018-02-15 19:42:05</sys_updated_on>
+        <workflow_version display_value="HR Change">4d5704f9db9813005e53d8c0cf96194e</workflow_version>
     </wf_estimated_runtime_config>
-    <wf_workflow_version action="update_multiple" query="workflow=d3302369db5813005e53d8c0cf9619b2^sys_id!=333e33e5db9813005e53d8c0cf9619cd">
+    <wf_workflow_version action="update_multiple" query="workflow=d3302369db5813005e53d8c0cf9619b2^sys_id!=4d5704f9db9813005e53d8c0cf96194e">
         <published>false</published>
     </wf_workflow_version>
 </record_update>
