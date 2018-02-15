@@ -15,10 +15,8 @@
 			shared: shared
 		}).then(function(){
 			c.data.action = "newRecord";
-			c.data.myStatus = shared.HR.NewStatus.toString();
-			c.data.myHRName = shared.HR.HRManager.toString();
-			c.data.myHRResolutionDateTime = shared.HR.HRDateTime.toString();
-			c.data.myComments = shared.HR.HRCommentsInitial.toString();
+			c.data.myEmployeeName = shared.HR.EmployeeName.toString();
+			c.data.myComments = shared.HR.Comments.toString();
 			
 			c.server.update().then(function(){
 				c.data.action = undefined;
@@ -27,7 +25,8 @@
 	}//onCreateNew
 	
 	c.onSettings = function(size){
-		alert('Work in progress');
+		//alert('Work in progress');
+		location.href = "?id=hr_settings";
 	}
 	
 	c.onEdit = function(size,item){
@@ -40,8 +39,11 @@
 			shared: shared
 		}).then(function(){
 			c.data.action = "updateRecord";
-			c.data.mySys_ID = shared.HR.Sys_ID.toString();			
-			c.data.myEmployeeName = shared.HR.EmployeeName.toString();			
+			c.data.mySys_ID = shared.HR.Sys_ID.toString();						
+			c.data.myStatus = shared.HR.NewStatus.toString();
+			c.data.myHRName = shared.HR.HRManager.toString();
+			c.data.myHRResolutionDateTime = shared.HR.HRDateTime.toString();
+			c.data.myComments = shared.HR.HRCommentsInitial.toString();
 			
 			c.server.update().then(function(){
 				c.data.action = undefined;
@@ -88,21 +90,18 @@ button {
 	
 	//gs.info('Start 0');
 	
+	var mydate = new GlideDateTime();  
+
 	if (input){
 		if (input.action == "newRecord"){
-			try{
 			var rsInsert = new GlideRecord('x_117085_hr_change_hr_changes');
 			rsInsert.initialize();
 			rsInsert.employee_name = input.myEmployeeName;
-			rsInsert.submitted = input.mySubmitted;
+			rsInsert.submitted = mydate.getDisplayValue();
 			rsInsert.employee_comments = input.myComments;
-			rsInsert.status = input.myStatus;
+			rsInsert.status = "Pending";
 			rsInsert.insert();
 			gs.addInfoMessage("The record was inserted.");
-			}
-			catch(err){
-				gs.addErrorMessage(err.message);
-			}
 		}
 		if (input.action == "updateRecord"){
 				var rsUpdate = new GlideRecord('x_117085_hr_change_hr_changes');
@@ -121,7 +120,6 @@ button {
 	}//if(input)
   
 	data.HRNew = [];
-	var mydate = new GlideDateTime();  
 	data.HRNew.push({
 		Sys_ID: "0",
 		EmployeeName: gs.getUserDisplayName(),
@@ -136,10 +134,12 @@ button {
 	
 	data.HRChanges = [];	
 	var rs = new GlideRecord('x_117085_hr_change_hr_changes');
+	rs.orderByDesc('number');
 	rs.query();
 	while(rs.next()){
 		data.HRChanges.push({
 			Sys_ID: rs.sys_id.toString(),
+			Number: rs.number.toString(),
 			EmployeeName: rs.employee_name.toString(),
 			Submitted: rs.submitted.toString(),
 			Status: rs.status.toString(),
@@ -160,14 +160,14 @@ button {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-02-13 15:00:01</sys_created_on>
         <sys_id>29933c01db1013005e53d8c0cf9619c0</sys_id>
-        <sys_mod_count>106</sys_mod_count>
+        <sys_mod_count>127</sys_mod_count>
         <sys_name>HR Change</sys_name>
         <sys_package display_value="HR Change" source="x_117085_hr_change">31d23c01db1013005e53d8c0cf96191c</sys_package>
         <sys_policy/>
         <sys_scope display_value="HR Change">31d23c01db1013005e53d8c0cf96191c</sys_scope>
         <sys_update_name>sp_widget_29933c01db1013005e53d8c0cf9619c0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-14 21:21:06</sys_updated_on>
+        <sys_updated_on>2018-02-15 18:14:20</sys_updated_on>
         <template><![CDATA[<div class="container">
 	<div class="header" style="height:150px; width:100%;">
     <div class="subheader" style="height:50px; width:100%;">
@@ -187,7 +187,7 @@ button {
         </td>
         <td style="padding: 3px; border: none;">
         	<button ng-click="c.onSettings('lg')" class="settings btn btn-primary">
-      			Settings
+      			HR Settings
     			</button>
         </td>
       </tr>
@@ -196,6 +196,7 @@ button {
   <div class="content">
     <table>
       <tr>
+        <th>ID</th>
       	<th>Employee<br/>Name</th>
         <th>Submitted<br/>(Date/Time)</th>
         <th>Status</th>
@@ -206,6 +207,7 @@ button {
         <th>Action</th>
       </tr>
       <tr ng-repeat="item in data.HRChanges">
+        <td>{{item.Number}}</td>
       	<td>{{item.EmployeeName}}</td>
         <td>{{item.Submitted}}</td>
         <td>{{item.Status}}</td>
@@ -214,7 +216,7 @@ button {
         <td>{{item.HRResolutionDateTime}}</td>
         <td>{{item.HRComments}}</td>
         <td>
-        	<button ng-click="c.onEdit('lg',item)" class="editOffboarding btn btn-primary">
+        	<button ng-click="c.onEdit('lg',item)" class="editOffboarding btn btn-primary" ng-disabled="item.Status != 'Pending'">
             Edit
           </button>
         </td>
@@ -224,6 +226,9 @@ button {
   <div class="footer">
     &nbsp;
   </div>
+</div>
+<div>
+  <p style="font-size:10px">&nbsp;&nbsp;&nbsp;Version: Feb 15th, 2018 - 11:30 am</p>
 </div>]]></template>
     </sp_widget>
 </record_update>
